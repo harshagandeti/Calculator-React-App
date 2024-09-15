@@ -1,0 +1,111 @@
+.Calculator__Container {
+    margin: 20.8px auto;
+    height: 90vh;
+    width: 35vw;
+    background-color: #242424;
+
+    .Calculator__Container--Display {
+        height: 30%;
+        background-color: #222;
+        padding: .625rem;
+        .Calculator__Container--Display--Text {
+            font-size: 1.3rem;
+            color: #afafaf;
+            height: 40%;
+            width: 100%;
+            text-align: end;
+            border-bottom: 1px solid gray;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+
+        .Calculator__Container--Display--Input {
+            height: 60%;
+            width: 100%;
+
+            input {
+                width: 100%;
+                color: rgb(240, 240, 240);
+                height: 100%;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                text-align: end;
+                font-size: 32px;
+
+                &::placeholder {
+                    font-size: 32px;
+                    color: rgb(240, 240, 240);
+
+                }
+            }
+        }
+
+    }
+
+    .Calculator__Container--Keyboard {
+        padding: .125rem;
+
+        height: 70%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: .125rem;
+
+        button {
+            border: none;
+            font-size: 1.65rem;
+            color: rgb(255, 255, 255);
+            font-weight: 400;
+            background-color: #303131;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #2d2d2d;
+            }
+
+        }
+
+        .Keys--Orange--color {
+            color: orangered;
+        }
+
+        .Keys--Green--color {
+            color: rgb(57, 255, 13);
+        }
+
+        .Keys--Green--Bg--color {
+            color: rgb(255, 255, 255);
+            background-color: rgb(239, 64, 1);
+            ;
+        }
+    }
+
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .Calculator__Container {
+        width: 50vw;
+
+        input {
+            font-size: 1.5625rem;
+
+            &::placeholder {
+                font-size: 1.5625rem;
+            }
+        }
+    }
+
+    button {
+        border: none;
+        font-size: 1rem;
+
+
+    }
+
+
+}
